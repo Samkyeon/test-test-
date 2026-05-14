@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>엘리베이터 기술 개념 사전</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">⬆</span>
+      <span class="logo-text">엘리베이터 기술 개념 사전</span>
+    </div>
+    <div class="header-search">
+      <input type="text" id="search-input" placeholder="개념 검색..." autocomplete="off">
+      <div id="search-results" class="search-dropdown"></div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- 사이드바 -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-section" id="nav-tree"></div>
+  </nav>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+
+    <!-- 탭 바 -->
+    <div class="tab-bar" id="tab-bar">
+      <div class="tab-scroll">
+        <!-- 탭은 JS로 생성 -->
+      </div>
+    </div>
+
+    <!-- 관계도 뷰 -->
+    <div class="view" id="view-map">
+      <div class="map-controls">
+        <div class="cat-filters" id="cat-filters"></div>
+        <div class="map-hint">항목에 마우스를 올리면 연결 관계, 클릭하면 상세 설명</div>
+      </div>
+      <div class="map-container">
+        <svg id="relation-svg" xmlns="http://www.w3.org/2000/svg"></svg>
+        <div id="map-tooltip" class="map-tooltip"></div>
+      </div>
+      <div id="map-detail" class="map-detail-panel">
+        <div class="map-detail-hint">항목을 클릭하면 여기에 상세 설명이 표시됩니다</div>
+      </div>
+    </div>
+
+    <!-- 상세 카드 뷰 -->
+    <div class="view hidden" id="view-card">
+      <div id="card-content"></div>
+    </div>
+
+  </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
